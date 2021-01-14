@@ -16,7 +16,7 @@ class Create(CreateView):
 
 def listfunc(request):
    for post in News.objects.all():
-       url = post.url
+      url = post.url
    list = []
    response = requests.get(url)
    bs = BeautifulSoup(response.text, "html.parser")
