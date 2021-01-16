@@ -20,7 +20,7 @@ def listfunc(request):
    list = []
    response = requests.get(url)
    bs = BeautifulSoup(response.text, "html.parser")
-   ul_tag = bs.find_all(class_="topicsList_main")
+   ul_tag = bs.find_all(class_="tracked_mods")
    for tag in ul_tag[0]:
       title = tag.a.getText()
       url2 = tag.a.get("href")
