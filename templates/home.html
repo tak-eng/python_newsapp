@@ -4,12 +4,13 @@
 <div class="jumbotron">
    <div class="container">
      <h1 class="display-4">Yahoo News  スクレイピングアプリ</h1>
-     <p class="lead">ニュースのURLを記述してください</p>
+     <p class="lead">ニュースのURLを記述してください<br>※ulタグで記載されているニュースが抽出されます</p>
    </div>
  </div>
 {% endblock header %}
 
 {% block content %}
+{% include 'form-alert.html' %}
 <div class="container">
 <form action='' method='POST'>{% csrf_token %}
 <p>URL： <input type="text" name='url'></p>
