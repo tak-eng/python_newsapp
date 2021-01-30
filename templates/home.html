@@ -10,7 +10,6 @@
 {% endblock header %}
 
 {% block content %}
-{% include 'form-alert.html' %}
 <div class="container">
 <form action='' method='POST'>{% csrf_token %}
 <p>URL： <input type="text" name='url'></p>
